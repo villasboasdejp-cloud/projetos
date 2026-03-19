@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+    int main(){
+        char produtoA[32] ="Produto A";
+        char produtoB[32] ="Produto B";
+
+        unsigned int estoqueA = 1000;
+        unsigned int estoqueB = 2000;
+
+        float valorA = 10.50;
+        float valorB = 10.20;
+
+        unsigned int estoqueminiA = 500;
+        unsigned int estoqueminiB = 2500;
+
+        double valortotalA;
+        double valortotalB;
+        
+        int resultadoA;
+        int resultadoB;
+
+    // Exibir as informações do produto 
+
+        printf ("Produto %s tem estoque %u e o valor unitário é R$ %.2f", produtoA, estoqueA, valorA);
+        printf ("Produto %s tem estoqiue %u e o valor unitário é R$ %.2f", produtoB, estoqueB, valorB);
+
+        //Comparação com o valor mínimo de etoque
+
+        resultadoA = resultadoA > estoqueminiA;
+        resultadoB = resultadoB > estoqueminiB;
+
+            printf ("O produto %s tem estoque mínimo %u", produtoA, estoqueA);
+            printf ("o Produto %s tem estoque mínimo &u", produtoB, estoqueB);
+
+        //Comparação total dos valores dos produtos 
+        
+        printf ("O valor total de é A(R$%.2f) é maior que o valor total de B(R$%.2f)? %d\n",
+                        estoqueA * valorA,
+                        estoqueB * valorB,
+            (valorA * estoqueA) > (valorB * estoqueB));
+
+    return 0;   
+    }
