@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
     int main(){
         int idade =25;
@@ -13,5 +13,5 @@
         printf("Atura: %.2F metros\n", altura);
         printf("Saldo bancário: %.2f reais\n", saldobancario);
         printf("Inicial do Nome: %c○\n", inicial);
-        
-    }
+    return 0;
+}
