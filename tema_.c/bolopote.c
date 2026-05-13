@@ -21,7 +21,8 @@
 	printf("*              ao                     *\n");
 	printf("*          VILLAS BALA                *\n");
     printf("***************************************\n");
-
+    do
+   {
     //* sabores do bolo e preços
     printf("+--------------------------------------+\n");
     printf("|        Sabores do Bolo               |\n");
@@ -34,7 +35,9 @@
     printf("+--------------------------------------+\n");
 
     //* perguntar qual sabor o cliente deseja e quantos bolos ele quer comprar
-    
+   
+   
+   
     printf("Qual sabor do bolo você deseja? Digite o número correspondente:\n");
     scanf("%d", &escolha);
     printf("Quantos bolos você deseja?\n");
@@ -49,7 +52,6 @@
         case 5: soma = quantidade * doisAmores; break;
         default: printf("Escolha inválida\n"); soma = 0; break;
     }
-    printf("O valor total dos seus bolos é R$ %.2f\n", soma);
 
     //* mensagem de agradecimento para o cliente
     
@@ -58,24 +60,16 @@
 
     if (resposta[0] == 's' || resposta[0] == 'S') {
         printf("Compra finalizada com sucesso!\n");
+        pedirmais[0] = 'n';
     } else if (resposta[0] == 'n' || resposta[0] == 'N') {
         printf("Deseja pedir mais?\n");
-        scanf(" %s", pedirmais);
-        if (pedirmais[0] == 's' || pedirmais[0] == 'S') {
-            printf("Qual sabor do bolo você deseja? Digite o número correspondente:\n");
-            scanf("%d", &escolha);
-            printf("Quantos bolos você deseja?\n");
-            scanf("%d", &quantidade);
-            switch(escolha) {
-                case 1: soma += quantidade * brigadeiro; break;
-                case 2: soma += quantidade * brigadeirobranco; break;
-                case 3: soma += quantidade * prestígio; break;
-                case 4: soma += quantidade * maracujá; break;
-                case 5: soma += quantidade * doisAmores; break;
-                default: printf("Escolha inválida\n"); break;
-            }
-        }
+        scanf(" %3s", pedirmais);
+    } else {
+        pedirmais[0] = 'n';
     }
+
+    } while (pedirmais[0] == 's' || pedirmais[0] == 'S');
+
     printf("O valor total dos seus bolos é R$ %.2f\n", soma);
     printf("Obrigado por comprar conosco! volte semmpre!\n");
     return 0;
