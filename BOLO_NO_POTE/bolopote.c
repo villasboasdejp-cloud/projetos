@@ -24,10 +24,10 @@
         do
         {
             //* sabores do bolo e preços
-         printf("+--------------------------------------+\n");
+        printf("+--------------------------------------+\n");
         printf("|        Sabores do Bolo               |\n");
         printf("+--------------------------------------+\n");
-         printf("*     1 Brigadeiro         - R$ 10,00  *\n");
+        printf("*     1 Brigadeiro         - R$ 10,00  *\n");
         printf("*     2 Brigadeiro Branco  - R$ 10,00  *\n");
         printf("*     3 Prestígio          - R$ 10,00  *\n");
         printf("*     4 Maracujá           - R$ 12,00  *\n");
