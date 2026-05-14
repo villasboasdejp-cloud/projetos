@@ -14,59 +14,60 @@
         char resposta[500];
 
 
-	//*apresentação para o client
+	    //*apresentação para o client
 
-    printf("***************************************\n");
-	printf("*      Ola,Seja Bem vindo             *\n");
-	printf("*              ao                     *\n");
-	printf("*          VILLAS BALA                *\n");
-    printf("***************************************\n");
-    do
-   {
-    //* sabores do bolo e preços
-    printf("+--------------------------------------+\n");
-    printf("|        Sabores do Bolo               |\n");
-    printf("+--------------------------------------+\n");
-    printf("*     1 Brigadeiro         - R$ 10,00  *\n");
-    printf("*     2 Brigadeiro Branco  - R$ 10,00  *\n");
-    printf("*     3 Prestígio          - R$ 10,00  *\n");
-    printf("*     4 Maracujá           - R$ 12,00  *\n");
-    printf("*     5 Dois Amores        - R$ 10,00  *\n");
-    printf("+--------------------------------------+\n");
+        printf("***************************************\n");
+	    printf("*      Ola,Seja Bem vindo             *\n");
+	    printf("*              ao                     *\n");
+	    printf("*          VILLAS BALA                *\n");
+        printf("***************************************\n");
+        do
+        {
+            //* sabores do bolo e preços
+         printf("+--------------------------------------+\n");
+        printf("|        Sabores do Bolo               |\n");
+        printf("+--------------------------------------+\n");
+         printf("*     1 Brigadeiro         - R$ 10,00  *\n");
+        printf("*     2 Brigadeiro Branco  - R$ 10,00  *\n");
+        printf("*     3 Prestígio          - R$ 10,00  *\n");
+        printf("*     4 Maracujá           - R$ 12,00  *\n");
+        printf("*     5 Dois Amores        - R$ 10,00  *\n");
+        printf("+--------------------------------------+\n");
 
-    //* perguntar qual sabor o cliente deseja e quantos bolos ele quer comprar
+        //* perguntar qual sabor o cliente deseja e quantos bolos ele quer comprar
    
    
    
-    printf("Qual sabor do bolo você deseja? Digite o número correspondente:\n");
-    scanf("%d", &escolha);
-    printf("Quantos bolos você deseja?\n");
-    scanf("%d", &quantidade);
+         printf("Qual sabor do bolo você deseja? Digite o número correspondente:\n");
+         scanf("%d", &escolha);
+         printf("Quantos bolos você deseja?\n");
+         scanf("%d", &quantidade);
 
-    //* calcular o valor total dos bolos escolhidos e exibir o resultado para o cliente
-    switch(escolha){
-        case 1: soma = quantidade * brigadeiro; break;
-        case 2: soma = quantidade * brigadeirobranco; break;
-        case 3: soma = quantidade * prestígio; break;
-        case 4: soma = quantidade * maracujá; break;
-        case 5: soma = quantidade * doisAmores; break;
-        default: printf("Escolha inválida\n"); soma = 0; break;
-    }
+         //* calcular o valor total dos bolos escolhidos e exibir o resultado para o client
+            switch(escolha){
+            case 1: soma = quantidade * brigadeiro; break;
+            case 2: soma = quantidade * brigadeirobranco; break;
+            case 3: soma = quantidade * prestígio; break;
+            case 4: soma = quantidade * maracujá; break;
+            case 5: soma = quantidade * doisAmores; break;
+            default: printf("Escolha inválida\n"); soma = 0; break;
+            }
 
-    //* mensagem de agradecimento para o cliente
+         //* mensagem de agradecimento para o cliente
     
-    printf("Deseja finalizar a compra ? \n");
-    scanf(" %s", resposta);
+            printf("Deseja finalizar a compra ? \n");
+            scanf(" %s", resposta);
 
-    if (resposta[0] == 's' || resposta[0] == 'S') {
-        printf("Compra finalizada com sucesso!\n");
-        pedirmais[0] = 'n';
-    } else if (resposta[0] == 'n' || resposta[0] == 'N') {
-        printf("Deseja pedir mais?\n");
-        scanf(" %3s", pedirmais);
-    } else {
-        pedirmais[0] = 'n';
-    }
+                if (resposta[0] == 's' || resposta[0] == 'S') {
+                printf("Compra finalizada com sucesso!\n");
+                pedirmais[0] = 'n';
+                } else if (resposta[0] == 'n' || resposta[0] == 'N') {
+                    printf("Deseja pedir mais?\n");
+                    scanf(" %3s", pedirmais);
+                    } else {
+                    pedirmais[0] = 'n';
+                        printf("Resposta inválida. Finalizando compra.\n");
+                }
 
     } while (pedirmais[0] == 's' || pedirmais[0] == 'S');
 
